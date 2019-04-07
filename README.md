@@ -2,5 +2,5 @@
 
 ```
 $ pip install PyPDF2
-$ python main.py >> ListOfQuestions_K17BN.txt
+$ python main.py
 ```

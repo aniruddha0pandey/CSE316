@@ -1,0 +1,3362 @@
+LOVELY PROFESSIONAL UNIVERSITY
+ 
+Academic Task
+-
+3 (Operating System)
+ 
+School of 
+Computer Science and Engineering
+  
+Faculty of 
+Technology And Sciences
+ 
+Name of the faculty member  
+Navjot Kaur
+ 
+Course Code: 
+CSE 316
+  
+Course Title: 
+Operating System
+ 
+Term:
+ 
+18192
+     
+ 
+ 
+ 
+Max. Marks
+:30  
+ 
+ 
+Date of Allotment: 
+11
+/02
+/201
+8
+ 
+    
+Date of Submission: 1
+7
+/04
+/201
+8
+ 
+Instructions for Assignment Submission
+ 
+1.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+This assignment is a compulsory CA component.
+ 
+2.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The assignment is to be done 
+on individual basis (no groups)
+. Each 
+student will submit 
+the assignment of questions that are assigned individually.
+ 
+3.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The assignment submission mode is
+ 
+Online
+ 
+only. Student has to upload the assignment on 
+or before the last date on UMS only. No submission via e
+-
+mail or pen
+-
+drive or an
+y media will be 
+accepted.
+ 
+4.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Non
+-
+submission of assignment on UMS till the last date will result in
+ 
+ZERO
+ 
+marks.
+ 
+5.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The student is supposed to solve the assignment on his/her own. If it is discovered at any 
+stage that the student has used unfair 
+means like copying from peers or copy pasting the code 
+taken from internet etc.
+ 
+ZERO
+ 
+marks will be awarded to the student.
+ 
+6.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The student who shares his assignment with other students (either in same section or 
+different section) will also get
+ 
+ZERO 
+m
+arks.
+ 
+Simulation Based Assignment Assessment Rubric
+ 
+ 
+Assessment Criteria
+ 
+Parameter
+ 
+Weightag
+e in %
+ 
+Description
+ 
+Test Cases
+ 
+20
+ 
+The code must satisfy the sample test cases i.e. for each set of 
+input it must generate the desirable output.
+ 
+Concept 
+Clarity
+ 
+10
+ 
+The student need to specify the algorithms and the OS 
+concepts they are applying on the given scenario based 
+problem.
+ 
+Functional 
+Requirements(
+boundary 
+conditions, 
+constraint 
+satisfaction, 
+etc)
+ 
+50
+ 
+Code has to fulfill all the constraints and will satisfy 
+the 
+boundary conditions mentioned in the problem. It is mandatory 
+to use C language. Solution should be implemented using OS 
+concepts( System calls)
+ 
+Report 
+submission
+ 
+10
+ 
+The student has to submit the report as per the format 
+specified.
+ 
+Use of GitHub 
+Repository
+ 
+10
+ 
+Student should upload the project on GitHub repository, Every 
+week at least one revision should be done with a total of 
+minimum 5 revisions during project lifecycle. Students 
+uploading project in GitHub in the last week of submission 
+would be
+ 
+subjected to 
+DEDUCTION OF MARKS.
+ 
+ 
+Note: Marks deduction on the basis of similarity index
+ 
+Plagiarism Weightage
+ 
+Marks Deducted
+ 
+50
+-
+60%
+ 
+03
+ 
+60
+-
+70%
+ 
+06
+ 
+70
+-
+80%
+ 
+09
+ 
+80
+-
+90%
+ 
+12
+ 
+Above 90%
+ 
+27
+ 
+ 
+Report Format
+ 
+ 
+Dear Students,
+ 
+ 
+The individual report template is built for letting us evaluate your individual understanding, 
+capability and retention of the assigned 
+questions
+. While building answers to the questions from 
+the template, you should be relating the 
+task 
+assigned to you an
+d keep in mind the below 
+mentioned 
+points and submit a write up to for the project.
+ 
+ 
+Format of the report:
+ 
+Text Size: 12
+ 
+Text Style: Times New Roman
+ 
+Line Spacing: 1.5 maximum
+ 
+ 
+Mention the below in header of the word document
+ 
+Student Name:
+ 
+Student ID
+ 
+Email 
+Address:
+ 
+GitHub Link:
+ 
+Code: 
+Mention solution code assigned to you
+ 
+ 
+1.Explain the problem in terms of operating system concept? (Max 200 word)
+ 
+Description: 
+ 
+2.
+Write the algorithm for proposed solution of the assigned problem.
+ 
+Algorithm:
+ 
+3.
+Calculate complexi
+ty of implemented algorithm. (Student must specify complexity of 
+each line of code along with overall complexity)
+ 
+Description (purpose of use):
+ 
+4.Explain all the constraints given in the problem. Attach the code snippet of the 
+implemented constraint.
+ 
+Code 
+snippet:
+ 
+5.If you have implemented any additional algorithm to support the solution, explain the 
+need and usage of the same.  
+ 
+Description:
+ 
+6. Explain the boundary conditions of the implemented code.
+ 
+Description:
+ 
+7.Explain all the test cases applied on the
+ 
+solution of assigned problem
+.
+ 
+Description:
+ 
+8.Have you made minimum 5 revisions of solution on GitHub?
+ 
+GitHub Link:
+ 
+ 
+List of 
+Questions:
+ 
+ 
+Ques. 
+1. Considering 4 processes with the arrival time and the burst time requirement of the 
+processes the scheduler schedules the processes by interrupting the processor after every 3 units 
+of time and does consider the completion of the process in this iterati
+on. The schedulers then 
+checks for the number of processes waiting for the processor and allots the processor to the 
+process but interrupting the processor after every 6 units of time and considers the completion of 
+the process in this iteration. The sched
+uler after the second iteration checks for the number of 
+processes waiting for the processor and now provides the processor to the process with the least 
+time requirement to go in the terminated state.
+ 
+The inputs for the number of requirements, arrival tim
+e and burst time should be provided by the 
+user.
+ 
+ 
+Consider the following units for reference.
+ 
+Process 
+ 
+ 
+ 
+Arrival time 
+ 
+ 
+ 
+Burst time
+ 
+P1 
+ 
+ 
+ 
+ 
+ 
+0 
+ 
+ 
+ 
+ 
+ 
+18
+ 
+P2 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+23
+ 
+P3 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+ 
+ 
+ 
+ 
+13
+ 
+P4 
+ 
+ 
+ 
+ 
+ 
+13 
+ 
+ 
+ 
+ 
+ 
+10
+ 
+Develop a scheduler which submits the processes to 
+the processor in the above defined scenario, 
+and compute the scheduler performance by providing the waiting time for process, turnaround 
+time for process and average waiting time and turnaround time.
+ 
+ 
+Ques. 
+2. Considering the arrival time and burst time re
+quirement of the process the scheduler 
+schedules the processes by interrupting the processor after every 6 units of time and does 
+consider the completion of the process in this iteration. The scheduler than checks for the number 
+of process waiting for the 
+processor and allots the processor to the process but interrupting the 
+processor every 10 unit of time and considers the completion of the processes in this iteration. 
+The scheduler checks the number of processes waiting in the queue for the processor afte
+r the 
+second iteration and gives the processor to the process which needs more time to complete than 
+the other processes to go in the terminated state.
+ 
+The inputs for the number of requirements, arrival time and burst time should be provided by the 
+user.
+ 
+C
+onsider the following units for reference.
+ 
+Process 
+ 
+ 
+ 
+Arrival time 
+ 
+ 
+ 
+Burst time
+ 
+P1 
+ 
+ 
+ 
+ 
+ 
+0 
+ 
+ 
+ 
+ 
+ 
+20
+ 
+P2 
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+ 
+ 
+ 
+ 
+36
+ 
+P3 
+ 
+ 
+ 
+ 
+ 
+13 
+ 
+ 
+ 
+ 
+ 
+19
+ 
+P4 
+ 
+ 
+ 
+ 
+ 
+26 
+ 
+ 
+ 
+ 
+ 
+42
+ 
+Develop a scheduler which submits the processes to the processor in the defined scenario, and 
+compute
+ 
+the scheduler performance by providing the waiting time for process, turnaround time 
+for process and average waiting time and turnaround time.
+ 
+ 
+Ques. 
+3. Consider a scheduler which schedules the job by considering the arrival time of the 
+processes where arrival time if given as 0 is discarded or displayed as error. The scheduler 
+implements the shortest job first scheduling policy, but checks the queue of
+ 
+the processes after 
+the every process terminates and time taken for checking and arranging the process according to 
+the shortest job is 2 time unit. Compute the waiting time, turnaround time and average waiting 
+time and turnaround time of the processes. A
+lso compute the total time taken by the processor to 
+compute all the jobs.
+ 
+ 
+The inputs for the number of requirements, arrival time and burst time should be provided by the 
+user.
+ 
+ 
+Consider the following units for reference.
+ 
+Process 
+ 
+ 
+ 
+Arrival time 
+ 
+ 
+ 
+Burst
+ 
+Time
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+0 
+ 
+ 
+ 
+ 
+ 
+6
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+ 
+ 
+2
+ 
+3 
+ 
+ 
+ 
+ 
+ 
+5 
+ 
+ 
+ 
+ 
+ 
+1
+ 
+4 
+ 
+ 
+ 
+ 
+ 
+9 
+ 
+ 
+ 
+ 
+ 
+7
+ 
+5 
+ 
+ 
+ 
+ 
+ 
+10 
+ 
+ 
+ 
+ 
+ 
+5
+ 
+6 
+ 
+ 
+ 
+ 
+ 
+12 
+ 
+ 
+ 
+ 
+ 
+3
+ 
+7 
+ 
+ 
+ 
+ 
+ 
+14 
+ 
+ 
+ 
+ 
+ 
+4
+ 
+8 
+ 
+ 
+ 
+ 
+ 
+16 
+ 
+ 
+ 
+ 
+ 
+5
+ 
+9 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+ 
+ 
+ 
+ 
+7
+ 
+10 
+ 
+ 
+ 
+ 
+ 
+19 
+ 
+ 
+ 
+ 
+ 
+2
+ 
+Develop a scheduler which submits the processes to the processor in the defined sce
+nario, and 
+compute the scheduler performance by providing the waiting time for process, turnaround time 
+for process and average waiting time and turnaround time.
+ 
+ 
+Ques. 
+4
+. 
+ 
+Consider a scheduling approach which is non pre
+-
+emptive similar to shortest job nex
+t in 
+nature. The priority of each job is dependent on its estimated run time, and also the amount of 
+time it has spent waiting. Jobs gain higher priority the longer they wait, which prevents indefinite 
+postponement. The jobs that have spent a long time wai
+ting compete against those estimated to 
+have short run times. The priority can be computed as :
+ 
+Priority = 1+ Waiting time / Estimated run time
+ 
+Using the data given below compute the waiting time and turnaround time for each process and 
+average waiting 
+time and average turnaround time.
+ 
+ 
+Process
+ 
+Arrival time
+ 
+Burst time
+ 
+P
+1
+ 
+0
+ 
+20
+ 
+P
+2
+ 
+5
+ 
+36
+ 
+P
+3
+ 
+13
+ 
+19
+ 
+P
+4
+ 
+17
+ 
+42
+ 
+Ques. 
+5
+. CPU schedules N processes which arrive at different time intervals and each process is 
+allocated the CPU for a specific user input time unit,
+ 
+processes are scheduled using a preemptive 
+round robin scheduling algorithm. Each process must be assigned a numerical priority, with a 
+higher number indicating a higher relative priority. In addition to the processes one task has 
+priority 0. The length o
+f a time quantum is T units, where T is the custom time considered as 
+time quantum for processing. If a process is preempted by a higher
+-
+priority process, the 
+preempted process is placed at the end of the queue. Design a scheduler so that the task with 
+pri
+ority 0 does not starve for resources and gets the CPU at some time unit to execute. Also 
+compute waiting time, turn around.
+ 
+ 
+Ques. 
+6
+. Design a scheduling program that is capable of scheduling many processes that comes 
+in at some time interval and are 
+allocated the CPU not more that 10 time units. CPU must 
+schedule processes having short execution time first. CPU is idle for 3 time units and does not 
+entertain any process prior thi
+s time. Scheduler must maintain
+ 
+a queue that keeps the order of 
+execution
+ 
+of all the processes. Compute average waiting and turnaround time.
+ 
+ 
+Ques. 
+7
+. 
+ 
+Design a scheduling program to implements a Queue with two levels:
+ 
+Level 1 : Fixed priority preemptive Scheduling
+ 
+Level 2 : Round Robin Scheduling
+ 
+For a Fixed priority preemptiv
+e Scheduling (Queue 1), the Priority 0 is highest priority. If one 
+process P1 is scheduled and running , another process P2 with higher priority comes. The New 
+process (high priority) process P2 preempts currently running process P1 and process P1 will go 
+to second level queue. Time for which process will strictly execute must be considered in the 
+multiples of 2..
+ 
+All the processes in second level queue will complete their execution according to round robin 
+scheduling.
+ 
+Consider: 1. Queue 2 will be processed
+ 
+after Queue 1 becomes empty.
+ 
+2. Priority of Queue 2 has lower priority than in Queue 1.
+ 
+ 
+Ques. 
+8
+. Sudesh Sharma is a Linux expert who wants to have an online system where he can 
+handle student queries. Since there can be multiple requests at any time he w
+ishes to dedicate a 
+fixed amount of time to every request so that everyone gets a fair share of his time. He will log 
+into the system from 10am to 12am only. 
+ 
+He wants to have separate requests queues for students 
+and faculty. Implement a strategy for the 
+same. The summary at the end of the session should 
+include the total time he spent on handling queries and average query time.
+ 
+ 
+Ques. 
+9
+. Design a scheduler that uses a preemptive priority scheduling algorithm based on 
+dynamically changing priority. Larger 
+number for priority indicates higher priority.
+ 
+Assume that the following processes with arrival time and service time wants to execute (for 
+reference):
+ 
+ 
+ProcessID 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Arrival Time 
+ 
+ 
+ 
+ 
+Service Time
+ 
+P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4
+ 
+P2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1
+ 
+P3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2
+ 
+P4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1
+ 
+ 
+When the process starts execution (i.e. CPU assigned), priority for that process c
+hanges at the 
+rate of m=1.When the process waits for CPU in the ready queue (but not yet started execution), 
+its priority changes at a rate n=2. All the processes are initially assigned priority value of 0 when 
+they enter ready queue for the first time . T
+he time slice for each process is q = 1. When two 
+processes want to join ready queue simultaneously, the process which has not executed recently 
+is given priority. Calculate the average waiting time for each process. The program must be 
+generic i.e. number
+ 
+of processes, their burst time and arrival time must be entered by user. 
+ 
+ 
+Ques. 
+10. 
+Design a scheduler with multilevel queue having two queues which will schedule the 
+processes on the basis of 
+ 
+pre
+-
+emptive shortest remaining processing time first algorit
+hm (SROT) 
+followed by a scheduling in which each process will get 2 units of time to execute. Also note that 
+queue 1 has higher priority than queue 2. 
+ 
+Consider the following set of processes (for 
+reference)with their arrival times and the CPU burst times 
+in milliseconds.
+ 
+-------------------------------------
+ 
+Process 
+ 
+Arrival
+-
+Time 
+ 
+ 
+Burst
+-
+Time
+ 
+-------------------------------------
+ 
+P1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5
+ 
+P2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+   
+3
+ 
+P3 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+ 
+3
+ 
+P4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+       
+1
+ 
+-------------------------------------
+ 
+Calculate the average turnaround time and average waiting time for each process. The input for 
+number of processes 
+ 
+and their arrival time, burst time should be given by the user.
+ 
+ 
+Ques. 
+1
+1
+. 
+
+s operating system uses an algorithm for deadlock avoidance to manage the 
+allocation of resources say three namely A, B, and C to three processes P0, P1, and P2. Consider 
+the following scenario as reference .user must enter the current state of system as g
+iven in this 
+example :
+ 
+Suppose P0 has 0,0,1 instances , P1 is having 3,2,0 instances and P2 occupies 2,1,1 instances of 
+A,B,C resource respectively.
+ 
+Also the maximum number of instances required for P0 is 8,4,3 and for p1 is 6,2,0 and finally for 
+P2 there are 3,3,3 instances of resources A,B,C respectively. There are 3 instances of resource A, 
+2 instances of resource B and 2 instances of resource C ava
+ilable. Write a program to check 
+
+for additional resources in the
+ 
+current state:
+ 
+1.
+ 
+Request1: P0 requests 0 instances of A and 0 instances of B and 2 instances of 
+C.
+ 
+2.
+ 
+Request2: P1 requests for 2 instances of A, 0 instances of B and 0 instances of C.
+ 
+All the request must be given by user as input.
+ 
+ 
+Ques. 
+1
+2
+. 
+Three students (a, b, c) are arriving in the mess at the same time. The id numbers of 
+these students are 2132, 
+2102, 2453 and the food taken time from the mess table is 2, 4 and 8 
+minutes. If the two students have same remaining time so it is broken by giving priority to the 
+students with the lowest id number. Consider the longest remaining time first (LRTF) schedu
+ling 
+algorithm and calculate the average turnaround time and waiting time.
+ 
+ 
+Ques. 
+1
+3
+. 
+Write a program for multilevel queue scheduling algorithm. There must be three 
+queues generated. There must be specific range of priority associated with every queue. Now
+ 
+prompt the user to 
+enter number
+ 
+of processes along with their priority and burst time. Each 
+process must occupy the respective queue with specific priority range according to its priority. 
+Apply Round robin algorithm with quantum time 4 on queue with highest priority range. Apply 
+priori
+ty scheduling algorithm on the queue with medium range of priority and First come first 
+serve algorithm on the queue with lowest range of priority. Each and every queue should get a 
+quantum time of 10 seconds. Cpu will keep on shifting between queues after
+ 
+every 10 
+seconds 
+ 
+i.e. to apply round robin algorithm OF 10 seconds on over all structure.
+ 
+Calculate Waiting time and turnaround time for every process. The input for number of 
+processes 
+ 
+should be given by the user.
+ 
+ 
+Ques. 
+1
+4
+. 
+Write a program to 
+implement priority scheduling algorithm with context switching 
+time. Prompt to user to enter the number of processes and then enter their priority, burst time and 
+
+to 
+some another process of higher priority assume that it takes 2 seconds for context 
+switching(dispatcher latency).Form a scenario, where we can give the processes are assigned 
+with priority where the lower integ
+er number is higher priority and the
+n conte
+xt swit
+c
+h .. as the 
+process waits the prio
+r
+ity of the process increase at rate of one per 2 time units of wait.
+ 
+Calculate waiting time and turnaround time for each process.
+ 
+ 
+Ques. 
+1
+5
+.
+ 
+ 
+A uniprocessor system has n number of CPU intensive processes, each process has its 
+own requirement of CPU burst. The process with lowest CPU burst is given the highest priority. 
+A late
+-
+arriving higher priority process can preempt a currently running pro
+cess with lower 
+priority. Simulate a scheduler that is scheduling the processes in such a way that higher priority 
+process is never starved due to the execution of lower priority process. What should be its 
+average waiting time and average turnaround time 
+if no two processes are arriving are arriving at 
+same time. 
+ 
+ 
+Ques. 
+1
+6
+.
+ 
+Design a scheduler that can schedule the processes arriving system at periodical 
+intervals. Every process is assigned with a fixed time slice t milliseconds. If it is not able to 
+complete its execution within the assigned time quantum, then automated time
+r generates an 
+interrupt. The scheduler will select the next process in the queue and dispatcher dispatches the 
+process to processor for execution. Compute the total time for which processes were in the queue 
+waiting for the processor. Take the input for C
+PU burst, arrival time and time quantum from the 
+user.
+ 
+ 
+Ques. 
+1
+7
+.
+ 
+Design a scheduler following non
+-
+preemptive scheduling approach to schedule the 
+processes that arrives at different units and having burst time double the arrival time. Scheduler 
+selects the
+ 
+process with largest burst time from the queue for the execution. Process is not being 
+preempted until it finishes its service time. Compute the average waiting time and average 
+turnaround time. What should be the average waiting time if processes are exe
+cuted according to 
+Shortest Job First scheduling approach with the same attribute values.
+ 
+ 
+Ques. 
+18
+. 
+Ten students (a,b,c,d,e,f,g,h,i,j) are going to attend an event. There are lots of gift 
+shops, they all are going to the gift shops and randomly picking th
+e gifts. After picking the gifts 
+they are randomly arriving in the billing counter. The accountant gives the preference to that 
+student who has maximum number of gifts. Create a C or Java program to define order of billed 
+students? 
+ 
+ 
+Ques. 
+19
+. 
+There are 5 
+processes and 3 resource types, resource A with 10 instances, B with 5 
+instances and C with 7 instances. Consider following and write a c code to find whether the 
+system is in safe state or not?
+ 
+Available
+ 
+Processes
+ 
+Allocation
+ 
+Max
+ 
+A
+ 
+B
+ 
+C
+ 
+A
+ 
+B
+ 
+C
+ 
+A
+ 
+B
+ 
+C
+ 
+3
+ 
+3
+ 
+2
+ 
+P0
+ 
+0
+ 
+1
+ 
+0
+ 
+7
+ 
+5
+ 
+3
+ 
+ 
+P1
+ 
+2
+ 
+0
+ 
+0
+ 
+3
+ 
+2
+ 
+2
+ 
+P2
+ 
+3
+ 
+0
+ 
+2
+ 
+9
+ 
+0
+ 
+2
+ 
+P3
+ 
+2
+ 
+1
+ 
+1
+ 
+2
+ 
+2
+ 
+2
+ 
+P4
+ 
+0
+ 
+0
+ 
+2
+ 
+4
+ 
+3
+ 
+3
+ 
+ 
+Ques. 
+20
+. 
+Consider that a system has
+ 
+P
+ 
+resources of same type. These resources are shared by 
+Q
+ 
+processes
+ 
+time to time. All processes request and release the resources one at a time. 
+Generate
+ 
+a 
+solution to
+ 
+demonstrate that, the
+ 
+system is in safe state when following conditions are satisfied.
+ 
+Conditions:
+ 
+1.
+ 
+ 
+Maximum resource need of each process is between 1 and 
+P
+.
+ 
+2.
+ 
+Summation of all maximum needs is less than 
+P+Q
+ 
+Ques. 
+21
+. 
+Consider a scenario of demand paged memory. Page table is held in registers. It takes
+ 
+8 milliseconds to service a page fault if an empty page is available or the replaced page is not 
+modified and 20 milliseconds if the replaced page is modified. Memory access time is 100 
+nanoseconds. Assume that the page to be replaced is modified 70 perce
+nt of the time. Generate a 
+solution to find maximum acceptable page
+-
+fault rate for access time that is not more than 200 
+nanoseconds.
+ 
+Ques. 
+22
+.
+ 
+Consider following and Generate a solution to find whether the system is in safe state 
+or not?
+ 
+A
+vailable
+ 
+Processes
+ 
+Allocation
+ 
+Max
+ 
+A
+ 
+B
+ 
+C
+ 
+D
+ 
+A
+ 
+B
+ 
+C
+ 
+D
+ 
+A
+ 
+B
+ 
+C
+ 
+D
+ 
+1
+ 
+5
+ 
+2
+ 
+0
+ 
+P0
+ 
+0
+ 
+0
+ 
+1
+ 
+2
+ 
+0
+ 
+0
+ 
+1
+ 
+2
+ 
+ 
+P1
+ 
+1
+ 
+0
+ 
+0
+ 
+0
+ 
+1
+ 
+7
+ 
+5
+ 
+0
+ 
+P2
+ 
+1
+ 
+3
+ 
+5
+ 
+4
+ 
+2
+ 
+3
+ 
+5
+ 
+6
+ 
+P3
+ 
+0
+ 
+6
+ 
+3
+ 
+2
+ 
+0
+ 
+6
+ 
+5
+ 
+2
+ 
+P4
+ 
+0
+ 
+0
+ 
+1
+ 
+4
+ 
+0
+ 
+6
+ 
+5
+ 
+6
+ 
+ 
+Ques. 23. Write a multithreaded program that implements the banker's algorithm. Create n 
+threads that request and release resources from the bank. The banker will grant the request only 
+if it leaves the system in a safe state. It is important that shared data be safe from concurrent 
+access. To ensure safe access to shared data, you can use mut
+ex locks.
+ 
+Ques 24. Design a scheduling program to implements a Queue with two levels:
+ 
+Level 1 : Fixed priority preemptive Scheduling
+ 
+Level 2 : Round Robin Scheduling
+ 
+For a Fixed priority preemptive Scheduling (Queue 1), the Priority 0 is highest priority. 
+If one
+ 
+process P1 is scheduled and running, another process P2 with higher priority comes. The
+ 
+New 
+process (high priority) process P2 preempts currently running process P1 and process P1
+ 
+will go 
+to second level queue. Time for which process will strictly e
+xecute must be
+ 
+considered in the 
+multiples of 2.
+ 
+All the processes in second level queue will complete their execution according to round
+ 
+robin scheduling.
+ 
+Consider: 1. Queue 2 will be processed after Queue 1 becomes empty.
+ 
+3.
+ 
+Priority of Queue 2 has lower 
+priority than in Queue 1.
+ 
+Ques 25
+. Write a program for multilevel queue scheduling algorithm. There must be three queues
+ 
+generated. There must be specific range of priority associated with every queue. Now prompt
+ 
+the 
+user to enter number of processes along
+ 
+with their priority and burst time. Each process
+ 
+must 
+occupy the respective queue with specific priority range according to its priority. Apply 
+ 
+Round 
+Robin algorithm with quantum time 4 on queue with highest priority range. Apply
+ 
+priority 
+scheduling algo
+rithm on the queue with medium range of priority and First come first
+ 
+serve 
+algorithm on the queue with lowest range of priority. Each and every queue should get
+ 
+a 
+quantum time of 10 seconds. CPU will keep on shifting between queues after every 10
+ 
+seconds.
+ 
+Ques 26
+. Write a program in C which will ac
+c
+ept5 positive integers as command line 
+argume
+n
+ts. Performs ch
+e
+ck whether there are 5 arguments or not. If number of arguments are 
+lesser or greater than 5 then it 
+w
+ill print a relevant mes
+s
+age to the user. If 
+you enter 5 positive 
+integers from command line then the program tre
+a
+t those argument as requi
+r
+ed CPU bust for 
+P1, P2, P3, P4, andP5 process and calculate ave
+r
+age waiting t
+i
+me and average turnaround 
+time. Consider used scheduling algorit
+h
+m as FCFS and same
+ 
+arrival time for a
+l
+l the 
+proces
+s
+es.
+ 
+Ques 27
+. Write a program in C which reads input CPU bursts from a the first line of a te
+x
+t file 
+named as CPU_BURST.t
+x
+t. Validate the input numbers whet
+h
+er the numbers are positive 
+i
+n
+tegers or not. Consider the numbers a
+s CPU burst. If there are 5 positive inte
+g
+ers in the first 
+line of the text file then the program t
+r
+eat those argument as required CPU bust for P1, P2, P3, 
+P4, and P5 process and calcul
+a
+te ave
+r
+age waiting t
+i
+me and average turnaround time. Consider 
+used sch
+eduling algorit
+h
+m as SJF and same arrival time for a
+l
+l the proces
+s
+es.
+ 
+ 
+Ques 28
+. Given five memory partitions of 100 
+K
+B, 500 KB, 200 KB, 300 KB, and 600 
+K
+B 
+(in order), how would e
+a
+ch of the first
+-
+fit, best
+-
+fit, and worst
+-
+fit algo
+r
+ithms pl
+a
+ce processes 
+of 212 KB, 417 
+K
+B, 112 KB, and 426 KB (in order)? Write a program in C which will print 
+the map
+p
+ing of processes with memory par
+t
+itions for both the algo
+r
+ithms.(for conceptu
+a
+l 
+clarity refer the textbook)
+ 
+ 
+Ques 29
+. Write a C program to cr
+e
+ate a
+ 
+page table for a program of 5MB. Consider page size 
+as 2KB. Assign frame numbers rando
+m
+ly in page ta
+b
+le. (for conceptu
+a
+l clarity refer the 
+textbook)
+ 
+ 
+Ques 30
+. Write a C program to solve the following problem:
+ 
+ 
+Suppose that a disk drive has 5,000 cylinders
+, num
+b
+ered 0 to 4999. T
+h
+e drive is currently 
+serving a request at cylinder143, and the previous request was at cylinder 125. The queue of 
+pending requests, in FIFO order,is:
+ 
+ 
+86, 1470, 913, 1774, 948, 1509, 1022, 1750, 130
+ 
+ 
+Starting from the current head 
+position, what is t
+h
+e total dista
+n
+ce (in cylinders) that t
+h
+e disk 
+arm moves to satisfy all the pending requests for each of the FCFS disk
+-
+s
+cheduling 
+algorit
+h
+ms? (for conceptu
+a
+l clarity refer the textbook)
+ 
+Q31
+. Write a C program to solve the following probl
+em:
+ 
+Suppose that a disk drive has 5,000 cylinders, num
+b
+ered 0 to 4999. T
+h
+e drive is currently 
+serving a request at cylinder143, and the previous request was at cylinder 125. The queue of 
+pending requests, in FIFO order is:
+ 
+86, 1470, 913, 1774, 948, 1509, 1
+022, 1750, 130
+ 
+Starting from the current head position, what is t
+h
+e total dista
+n
+ce (in cylinders)that t
+h
+e disk 
+arm moves to satisfy all the pending requests for each of the SSTF disk
+-
+scheduling 
+algor
+i
+thms? (for conceptu
+a
+l clarity refer the textbook)
+ 
+Q32
+. 
+Write a C program to solve the following problem:
+ 
+Suppose that a disk drive has 5,000 cylinders, num
+b
+ered 0 to 4999. T
+h
+e drive is currently 
+serving a request at cylinder143, and the previous request was at cylinder 125. The queue of 
+pending requests, in FI
+FO order is:
+ 
+86, 1470, 913, 1774, 948, 1509, 1022, 1750, 130
+ 
+Starting from the current head position, what is t
+h
+e total dista
+n
+ce (in cylinders) that t
+h
+e disk 
+arm moves to satisfy all the pending requests for each of the SCAN disk
+-
+scheduling 
+algo
+r
+ithms?
+ 
+Q33
+. Write a C program to solve the following problem:
+ 
+Suppose that a disk drive has 5,000 cylinders, num
+b
+ered 0 to 4999. T
+h
+e drive is currently 
+serving a request at cylinder143, and the previous request was at cylinder 125. The queue of 
+pending requests, in 
+FIFO order is 
+ 
+86, 1470, 913, 1774, 948, 1509, 1022, 1750, 130
+ 
+Starting from the current head position, what is t
+h
+e total dista
+n
+ce (in cylinders) that t
+h
+e disk 
+arm moves to satisfy all the pending requests for each of the CSCAN disk
+-
+scheduling 
+algo
+r
+ithms?
+ 
+Q34
+. W
+r
+ite a C program to solve the following problem:
+ 
+Suppose that a disk drive has 5,000 cylinders, num
+b
+ered 0 to 4999. T
+h
+e drive is currently 
+serving a request at cylinder143, and the previous request was at cylinder 125. The queue of 
+pending requests, 
+in FIFO order is:
+ 
+ 
+86, 1470, 913, 1774, 948, 1509, 1022, 1750, 130
+ 
+ 
+Starting from the current head position, what is t
+h
+e total dista
+n
+ce (in cylinders) that t
+h
+e disk 
+arm moves to satisfy all the pending requests for each of the LOOK disk
+-
+s
+cheduling 
+algorit
+h
+ms?
+ 
+ 
+Q35
+. Write a C program to solve the following problem:
+ 
+Suppose that a disk drive has 5,000 cylinders, num
+b
+ered 0 to 4999. T
+h
+e drive is currently 
+serving a request at cylinder143, and the previous request was at cylinder 125. The queue of 
+pending 
+requests in FIFO order is:
+ 
+ 
+86, 1470, 913, 1774, 948, 1509, 1022, 1750, 130
+ 
+ 
+Starting from the current head position, what is t
+h
+e total dista
+n
+ce (in cylinders)that t
+h
+e disk 
+arm moves to satisfy all the pending requests for each of the C
+-
+LOOK disk
+-
+s
+cheduling 
+algorit
+h
+ms?
+ 
+ 
+Q36
+. Consider the following set of proces
+s
+es, with the length of the CPU burst given in 
+millis
+e
+cond
+s
+:
+ 
+ 
+ 
+ 
+ 
+Schedule the proces
+s
+es using SJF scheduling, and print the outlook of Gant Chart on t
+h
+e 
+computer screen.
+ 
+ 
+Exampl
+e
+:
+ 
+ 
+|_________
+_______|_________________|___________________________|___|
+ 
+ 
+ 
+Q37
+. Consider t
+h
+e following four proces
+s
+es, with the length of the CPU burst given in 
+millis
+e
+cond
+s
+ 
+ 
+ 
+ 
+ 
+ 
+W
+r
+ite a C program to calcula
+t
+e avera
+g
+e waiting time using shortest
+-
+r
+e
+maining
+-
+time
+-
+first 
+scheduling.
+ 
+ 
+Q38
+. consider t
+h
+e following
+ 
+s
+et of processe
+s
+, assumed to have arrived at time 0, in the 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+W
+r
+ite a C program to schedule the processes using priority
+ 
+s
+cheduling and calculate 
+avera
+g
+e wai
+t
+ing time. Consider Lower the number higher the priority.
+ 
+ 
+Q
+39
+.Thereare five proces
+s
+es in the system
+. 
+All five proces
+s
+es arrive at t
+i
+me 0, in the order 
+given, with the length of the CPU burst given in milliseconds:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+W
+r
+ite a C program which
+ 
+w
+ill incorpo
+r
+ate SFJ scheduling and print the ending time of 
+process 
+P
+i. 
+ 
+Q
+40
+. Consider the following set of proces
+s
+es, with the length of the CPU burst given in 
+millis
+e
+cond
+s
+:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The proces
+s
+es are assumed to have arrived in 
+the order Pi, P2, P3, P4, P5, all at time 0.
+ 
+W
+r
+ite a C 
+program to calcu
+l
+ate the turnaround time of each process by incorpora
+t
+ing SJF schedu
+l
+ing.
+ 
+Q
+41
+. Write a program which incorpor
+a
+te 
+P
+eterson's 
+s
+olution for synchron
+i
+zing two processes 
+those are 
+simultaneously trying to write on a shared file named as Fi
+l
+e.txt. (use system ca
+l
+ls 
+only)
+ 
+ 
+Q
+42
+. The Slee
+p
+ing
+-
+Barber Problem. A barbershop consists of a wai
+t
+ing room with n chairs 
+and a barber room with one barber chair. If there are no customers to be ser
+ved the barber 
+goes to sleep. If a customer enters the barbershop and all chairs are occupied then the 
+cu
+s
+tomer leaves the shop. If the barber is busy but chairs are avai
+l
+able, then the customer sits 
+in one of the free ch
+a
+irs. If the barber is asl
+e
+ep, the 
+cu
+s
+tomer wakes up the barber. Write a 
+program to coordinate the barber and the customers.
+ 
+ 
+Q43
+. Develop a scheduler which submits processes to the proces
+s
+or in the fo
+l
+lowing 
+scenario and compute t
+h
+e scheduler performance by
+ 
+providing the waiting time for 
+p
+rocess, turnaround time for process and ave
+r
+age wai
+t
+ing time and turnaround time.
+ 
+Considering the arrival time and the burst time requirement of the processes the scheduler 
+schedules the processes by interrupting the processor after every 3units of time an
+d does 
+consider the completion of the process in this iteration. The scheduler then checks for the 
+number of processes waiting for the processor and allots the processor to the process but 
+interrupting the processor after every 6 units of time and consider
+s the completion of the 
+process in this iteration. The scheduler after these iteration checks for the number of processes 
+waiting for the processor and now provides the processor to the process with the least time 
+requirement to go in the terminated state.
+ 
+The inputs for the number of requirements, ar
+r
+ival time and burst time should be 
+p
+rovided by the user
+.
+ 
+Q
+44
+. Develop a scheduler which submits processes to the proces
+s
+or in the fo
+l
+lowing scenario 
+and compute t
+h
+e scheduler performance by providing the 
+waiting time for process, turnaround 
+time for process and ave
+r
+age wai
+t
+ing time and turnaround time.
+ 
+Con
+s
+idering the ar
+r
+ival time and burst t
+i
+me requi
+r
+ement of the process the scheduler schedules 
+the processes by interru
+p
+ting the processor after every 6 un
+i
+ts of time and does consider the 
+compl
+e
+tion of the process in this 
+i
+teration. The scheduler then checks for the num
+b
+er of 
+process wai
+t
+ing for the processor and a
+l
+lots the processor to the process but interrupting the 
+processor every 10 unit of time and 
+considers the compl
+e
+tion of the processes in this iter
+a
+tion. 
+The scheduler checks the number of processes wa
+i
+ting in the queue for the processor after the 
+second ite
+r
+ation and gives the processor to the process which needs more t
+i
+me to complete 
+t
+h
+an the ot
+her processes to go in the te
+r
+minated sta
+t
+e.
+ 
+The inputs for the number of requirements ar
+r
+ival time and burst time should be 
+p
+rovided by the user.
+ 
+Q4
+5.If a t
+e
+acher is being
+ 
+s
+erved and during the pe
+r
+iod
+ 
+w
+hen he is being 
+s
+erved another 
+teac
+h
+er comes, then th
+a
+t teac
+h
+er would get the 
+s
+ervi
+c
+e next. This process might con
+t
+inue 
+leading to inc
+r
+ease in waiting time of 
+s
+tudents. Write a C program to ensure in your program 
+that the waiting 
+t
+ime of 
+s
+tudents is minimi
+z
+ed. Assume values of arrival time, burst time by 
+you
+r own.
+ 
+Q4
+6.Consider a schedu
+l
+ing appro
+a
+ch which is nonpre
+-
+empti
+v
+e similar to shortest job next in 
+nature. The prio
+r
+ity of e
+a
+ch job is depende
+n
+t on its e
+s
+timated run time and also the amount of 
+time it has spent waiting. Jobs gain higher priority the longer
+ 
+they wa
+i
+t which preve
+n
+ts 
+inde
+f
+ini
+t
+e postponement. The jobs th
+a
+t have spent a long time waiting compete against those 
+est
+i
+mated to have short run times. The priority can be computed as :
+ 
+Priority =1+ Wai
+t
+ing time / Estimated run time
+ 
+W
+r
+ite a C program 
+w
+hich 
+w
+ill use the data given below and compute t
+h
+e waiting time and 
+tur
+n
+around time for each process and ave
+r
+age wai
+t
+ing time and average turnaround 
+t
+ime.
+ 
+ 
+Process
+ 
+Arri
+v
+al time
+ 
+Burst time
+ 
+P1
+ 
+0
+ 
+20
+ 
+P2
+ 
+5
+ 
+36
+ 
+P3
+ 
+13
+ 
+19
+ 
+P4
+ 
+17
+ 
+42
+ 
+ 
+ 
+Q
+4
+7. For SJF algorithm,
+ 
+(i)
+ 
+We randomly gene
+r
+ate the number of jobs. There must be a limit on the number of jobs in a 
+system. (ii)The ex
+e
+cution time of the generated jobs is 
+a
+lso not kno
+w
+n. 
+H
+ere, 
+w
+e are 
+gene
+r
+ating the C
+P
+U burst of e
+a
+ch job ma
+k
+ing use of the past history.
+ 
+(iii)
+A
+ll the jobs are then arranged in a queue where 
+s
+earching is done to find the one with the 
+least CPU burst. There may be two jobs in queue 
+w
+ith the same ex
+e
+cution 
+t
+ime then FCFS 
+approach is to be performed.
+ 
+Case a) If the algo
+r
+ithm is non
+-
+pre
+e
+mpti
+v
+e in n
+a
+tu
+re, then the ne
+w
+ly arriving job is to be added 
+to the job queue even though it is of lesser execution time t
+h
+an the one running on the 
+processor.
+ 
+Case b) Otherwise pre
+-
+emption is performed.
+ 
+ 
+Assume values of arrival time, burst time (when required) by your
+ 
+own.
+ 
+ 
+ 
+Q
+4
+8.CPU 
+s
+chedules N processes 
+w
+hich arri
+v
+e at different time inter
+v
+als and e
+a
+ch process is 
+all
+o
+cated
+ 
+ 
+The CPU for a specific user input t
+i
+me un
+i
+t, processes are schedu
+l
+ed u
+s
+ing a pre
+e
+mptive round 
+robin schedu
+l
+ing algo
+r
+ithm. Each process must be a
+s
+signed a nume
+r
+ical prior
+i
+ty, 
+w
+ith a higher 
+num
+b
+er indica
+t
+ing a higher rel
+a
+tive priority. In addition to t
+h
+e proces
+s
+es one task has prior
+i
+ty 0. 
+The length of a time quantum is T un
+i
+ts, where T is the custom t
+i
+me conside
+r
+ed as time quant
+u
+m 
+for processing .If
+ 
+a process is pre
+-
+empted by a higher prio
+r
+ity process, the pre
+-
+empted process is 
+placed at the end of the queue. 
+D
+esign a 
+s
+cheduler so that the task with priority 0 does not starve 
+for resources and gets the CPU at some time unit to execu
+t
+e. Also comp
+u
+te w
+aiting time, turn 
+around.
+ 
+Q
+4
+9.Design a scheduling program that is capa
+b
+le of schedu
+l
+ing many proces
+s
+es that co
+m
+es in at 
+s
+ome time inter
+v
+al and are allocated the C
+P
+U not more th
+a
+n10 t
+i
+me units. CPU must 
+s
+chedule 
+processes having 
+s
+hort execution ti
+m
+e first. CPU is idle for 3 time units and does not entertain 
+any process prior this time. 
+S
+cheduler must mai
+n
+tain a queue th
+a
+t keeps the order of exec
+u
+tion of 
+all the proces
+s
+es. Compute avera
+g
+e wai
+t
+ing and turnaround time.
+ 
+Q5
+0. De
+s
+ign a scheduling program 
+to impleme
+n
+ts a Queue with two 
+l
+evels:
+ 
+ 
+Level 1: Fixed priority pre
+-
+emptive Scheduling
+ 
+Level 2: Round Robin Scheduling
+ 
+For a 
+F
+ixed prior
+i
+ty preemptive Scheduling (Queue1), t
+h
+ePriority 0 is highest priority. If one 
+process P1 is scheduled and running, anot
+h
+er process P2 
+w
+ith higher priority comes. The New 
+process (high priority) process P2 preem
+p
+ts currently running process P1 and process P1
+w
+ill go 
+to 
+s
+econd level queue. Time for which process will strictly execute must be considered in the 
+multiples of 2.
+ 
+A
+ll the proces
+s
+es in 
+s
+econd 
+l
+evel queue 
+w
+ill complete their ex
+e
+cution according to round robin 
+schedu
+l
+ing.
+ 
+Consider: 1. 
+Q
+ueue 2 will be processed after
+ 
+Q
+ueue 1 becomes empty.
+ 
+2. Priority of Queue 2 has lower prio
+r
+ity than in Queue 1.
+ 
+Q51
+. 
+D
+esign a 
+s
+cheduler
+ 
+that uses a pre
+-
+em
+p
+tive prio
+r
+ity scheduling algo
+r
+ithm based on 
+dyn
+a
+mically chan
+g
+ing priority. Larger number for priority indicates higher priority.
+ 
+Assume th
+a
+t the following processes 
+w
+ith arriv
+a
+l time and servi
+c
+e time wants to execute (for 
+refe
+r
+ence):
+ 
+Process
+ 
+AT
+ 
+Service Time (BT)
+ 
+P1
+ 
+ 
+0
+ 
+ 
+4
+ 
+P2
+ 
+ 
+1
+ 
+ 
+1
+ 
+P3
+ 
+ 
+2
+ 
+ 
+2
+ 
+P4
+ 
+ 
+3
+ 
+ 
+1
+ 
+When the process 
+s
+tarts ex
+e
+cution (i.e.CPU assig
+n
+ed) prior
+i
+ty for that process changes at the 
+ra
+t
+e of m=1. When the process 
+w
+aits for CPU in the ready queue (but not y
+e
+t 
+s
+tarted 
+execution), 
+its priority chan
+g
+es at a rate n=2. All the processes are in
+i
+ti
+a
+lly assigned priority 
+value of 0 when they enter ready queue for the first time. The 
+t
+ime slice for e
+a
+ch process is 
+q=1. When two proces
+s
+es 
+w
+ant to j
+o
+in ready queue simu
+l
+taneously, t
+h
+e process
+ 
+w
+hich has not 
+execu
+t
+ed recently is given priority. Calc
+u
+late the ave
+r
+age wai
+t
+ing time for e
+a
+ch proces
+s
+. The 
+progr
+a
+m must be generic i.e. number of proces
+s
+es, their burst time and arrival time must be 
+entered by user.
+ 
+Q52
+.Design a scheduler with mu
+l
+tilevel queue having two queues which 
+w
+ill schedule the 
+proces
+s
+es on the basis of pre
+-
+emptive 
+s
+hortest remai
+n
+ing proces
+s
+ing 
+t
+ime first algorithm 
+(SROT) fo
+l
+lowed by a schedu
+l
+ing in 
+w
+hich each process will get 2 units of time to ex
+e
+cute. 
+Also note t
+h
+at queue
+ 
+1 has higher priority than queue2. Consider the following
+ 
+s
+et of 
+processes (for refe
+r
+ence) with th
+e 
+arrival 
+t
+imes and the CPU burst times in milliseconds.
+ 
+Pro
+ 
+   
+AT       BT
+ 
+ 
+P1
+ 
+0
+ 
+5
+ 
+P2
+ 
+1
+ 
+3
+ 
+P3
+ 
+2
+ 
+3
+ 
+P4
+ 
+4
+ 
+1
+ 
+ 
+Calcul
+a
+te the average turnaround
+ 
+t
+ime and average 
+w
+aiting time for each process. The input for 
+number of processes and th
+e
+ir arrival 
+t
+ime, burst time 
+s
+hould be given by the user.
+ 
+ 
+Q53
+.consider a system with five processes P0 through P4 and thr
+e
+e re
+s
+ource ty
+p
+es 
+A
+, B and C.
+ 
+Resource type A has10 insta
+n
+ces, 
+re
+s
+ource type B has 5 instances, and resource type C has 7 
+insta
+n
+ces.
+ 
+Suppose that, at 
+t
+ime T0, t
+h
+e following snap shot of the system has been take
+n 
+ 
+ 
+ 
+ 
+ 
+ 
+Impleme
+n
+t the Banker's 
+a
+lgorit
+h
+m to claim that the system is in safe state or not?
+ 
+Q
+54
+. ASSIGN
+M
+ENT 
+COM
+P
+LETION PR
+O
+BLEM
+ 
+The
+r
+e are 3 
+s
+tudent proces
+s
+es and 1 teac
+h
+er process. 
+S
+tudents are supposed to do th
+e
+ir 
+assign
+m
+ents and they need 3 things for th
+a
+t
+-
+pen, paper and question paper. The teacher has an 
+infi
+n
+ite 
+s
+upply of a
+l
+l the three things. One 
+s
+tudents ha
+s pen, another has paper and anot
+h
+er has 
+que
+s
+tion pap
+e
+r. The 
+t
+eacher places two things on a shared table and the student having t
+h
+e 
+third compl
+e
+mentary thing makes the assignme
+n
+t and t
+e
+lls the teacher on com
+p
+le
+t
+ion. The 
+t
+eacher then pl
+a
+ces an other two t
+h
+ings out of the three and ag
+a
+in the 
+s
+tudent having the third 
+thing ma
+k
+es the assignme
+n
+t and tells the te
+a
+cher on comple
+t
+ion. This cy
+c
+le continues. WAP to 
+synchronise t
+h
+e teacher and the students.
+ 
+Section K17BN
+ 
+S.No.
+ 
+Roll Number
+ 
+Question No. Assigned
+ 
+1
+ 
+RK17BNA01,  RK17BNA28, 
+ 
+RK17BNB53 
+ 
+1,28
+ 
+2
+ 
+RK17BNA02, RK17BNA29, 
+ 
+RK17BNB54 
+ 
+2,29
+ 
+3
+ 
+RK17BNA03, RK17BNA30, 
+ 
+RK17BNB55 
+ 
+3,30
+ 
+4
+ 
+RK17BNA04, RK17BNA31, 
+ 
+RK17BNB56 
+ 
+4,31
+ 
+5
+ 
+RK17BNA05, RK17BNA32, 
+ 
+RK17BNB57 
+ 
+5,32
+ 
+6
+ 
+RK17BNA06, RK17BNA33, 
+ 
+RK17BNB58 
+ 
+6,33
+ 
+7
+ 
+RK17BNA07, RK17BNA34, 
+ 
+RK17BNB59 
+ 
+7,34
+ 
+8
+ 
+RK17BNA08, RK17BNA73, 
+ 
+RK17BNB60   
+ 
+8,35
+ 
+9
+ 
+RK17BNA09, RK17BNA75, 
+ 
+RK17BNB61 
+ 
+9,36
+ 
+10
+ 
+RK17BNA10, RK17BNB35, 
+ 
+RK17BNB62 
+ 
+10,37
+ 
+11
+ 
+RK17BNA11, RK17BNB36, 
+ 
+RK17BNB63 
+ 
+11,38
+ 
+12
+ 
+RK17BNA12, RK17BNB37, 
+ 
+RK17BNB64 
+ 
+12,39
+ 
+13
+ 
+RK17BNA13, RK17BNB38, 
+ 
+RK17BNB65 
+ 
+13,40
+ 
+14
+ 
+RK17BNA14, RK17BNB39, 
+ 
+RK17BNB66 
+ 
+14,41
+ 
+15
+ 
+RK17BNA15, RK17BNB40, 
+ 
+RK17BNB67 
+ 
+15,42
+ 
+16
+ 
+RK17BNA16, RK17BNB41, 
+ 
+16,43
+ 
+RK17BNB68 
+ 
+17
+ 
+RK17BNA17, RK17BNB42 
+ 
+17,44
+ 
+18
+ 
+RK17BNA18,  RK17BNB43 
+ 
+18,45
+ 
+19
+ 
+RK17BNA19,  RK17BNB44 
+ 
+19,46
+ 
+20
+ 
+RK17BNA20,  RK17BNB45 
+ 
+20,47
+ 
+21
+ 
+RK17BNA21,  RK17BNB46 
+ 
+21,48
+ 
+22
+ 
+RK17BNA22,  RK17BNB47 
+ 
+22,49
+ 
+23
+ 
+RK17BNA23,  RK17BNB48 
+ 
+23,50
+ 
+24
+ 
+RK17BNA24,  RK17BNB49 
+ 
+24,51
+ 
+25
+ 
+RK17BNA25,  RK17BNB50 
+ 
+25,52
+ 
+26
+ 
+RK17BNA26,  RK17BNB51 
+ 
+26,53
+ 
+27
+ 
+RK17BNA27,  RK17BNB52 
+ 
+27,54
+ 
+ 

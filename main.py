@@ -1,22 +1,19 @@
 import sys
 from PyPDF2 import PdfFileReader
 
-def text_extractor(input_file, total_pages):
-    with input_file as f:
-        pdf = PdfFileReader(f)
-
-        page = pdf.getPage(total_pages - 1)
-        print(page)
-        print('Page type: {}'.format(str(type(page))))
-
-        text = page.extractText()
-        print(text)
-
+def extract(pdf_file_path, text_file_path):
+    with open(pdf_file_path, 'rb') as pdf_file, open(text_file_path, 'w') as text_file:
+        read_pdf = PdfFileReader(pdf_file)
+        number_of_pages = read_pdf.getNumPages()
+        for page_number in range(number_of_pages):
+            page = read_pdf.getPage(page_number)
+            page_content = page.extractText()
+            text_file.write(page_content)
 
 def main(args=None):
-    path = './ListOfQuestions_K17BN.pdf'
-    input_file = open(path, "rb")
-    total_pages = PdfFileReader(input_file).getNumPages()
-    text_extractor(input_file, total_pages)
+    pdf_file_path = './ListOfQuestions_K17BN.pdf'
+    text_file_path = './ListOfQuestions_K17BN.txt'
+    extract(pdf_file_path, text_file_path)
+    return 0
 
 if __name__ == '__main__': sys.exit(main())
