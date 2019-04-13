@@ -9,6 +9,7 @@ def extract(pdf_file_path, text_file_path):
             page = read_pdf.getPage(page_number)
             page_content = page.extractText()
             text_file.write(page_content)
+            print(page_number + 1)
 
 def main(args=None):
     pdf_file_path = './ListOfQuestions_K17BN.pdf'
