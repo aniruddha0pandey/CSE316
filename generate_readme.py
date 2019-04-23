@@ -21,7 +21,7 @@ def make_readme(ques1_content, ques2_content, rPath, identifier):
 		
 		ques_line = g2.communicate()[0]
 
-		data = 'Ques. 1. {}\n---\nQues. 2. {}'.format(ques1_content, ques2_content)
+		data = '```\nQues. 1. {}\n---\nQues. 2. {}```\n'.format(ques1_content, ques2_content)
 		insert_data(rPath, int(ques_line), data)
 
 		return 'Success'

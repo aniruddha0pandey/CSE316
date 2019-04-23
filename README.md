@@ -12,6 +12,7 @@ $ # Download binaries from http://blog.alivate.com.au/poppler-windows/
 ```
 
 ## Questions
+```
 Ques. 1. Consider the following four processes, with the length of the CPU burst given in
 \nmilliseconds
 
@@ -49,6 +50,7 @@ Calculate the average turnaround time and average waiting time for each process.
 
 number of processes and their arrival time, burst time should be given by the user.
 
+```
 ## Known Bugs
 - Registration Number `68` is showing wrong question number. Dude to Form Feed (FF) line ending due to separation of pages and tables to next page.
 - Question number `11, 12, 13, 14, 15 , 16, 17` images aren't generating. grep isn't able to recognize question number as the the Line Feed (LL) line ending character is coming after the first digit of the above specified range.
