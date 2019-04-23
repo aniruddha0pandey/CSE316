@@ -25,6 +25,14 @@ def generate_snaps(pPath, ques1_num, ques2_num):
 		 	fmt='png'
 		)
 
+	# convert_from_path(
+	#  	pPath,
+	#  	output_folder="./snaps/",
+	#  	output_file='ques37',
+	#  	first_page=14,
+	#  	last_page=14,
+	#  	fmt='png'
+	# )
 
 	img_ratio_width, img_ratio_height = 17, 22
 	img_data = '<details><summary>Question Page Snapshots</summary><br />\
@@ -109,7 +117,7 @@ def get_ques_num(tPath, year, section, roll):
 	g3=subprocess.Popen(
 		["grep", "-m", "1", "[[:digit:]],[[:digit:]]"], 
 		stdout=subprocess.PIPE, stdin=g2.stdout, encoding='utf-8')
-	return g3.communicate()[0].split(',')
+	return g3.communicate()[0].replace('\n', '').split(',')
 
 def get_args():
 	parser = argparse.ArgumentParser()
