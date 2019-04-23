@@ -10,8 +10,7 @@ def insert_data(rPath, ques_line, data):
     out.writelines(lines)
     out.close()
 
-def make_readme(ques1_content, ques2_content, rPath):
-	identifier = '## Questions'
+def make_readme(ques1_content, ques2_content, rPath, identifier):
 	try:
 		g1=subprocess.Popen(
 			["grep", "-n", "^{}".format(identifier), rPath], 
@@ -104,10 +103,13 @@ def main():
 		args['pPath']
 	)
 
+	identifier = input("Enter identifier(default '## Questions)': ") or '## Questions'
+
 	task = make_readme(
 		ques1_content,
 		ques2_content,
-		args['rPath']
+		args['rPath'],
+		identifier	
 	)
 
 	print(task)
