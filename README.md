@@ -1,14 +1,17 @@
 # CSE316
 
+This program internally uses `grep`, `perl`, `pdftotext`.
 ```shell
-$ pip install PyPDF2 pillow pdf2image
-$ python generate_readme.py ./ListOfQuestions_K17BN.pdf ./README.md -y 2017 -s BN -r 10
-```
-```shell
-$ For Unix bases systems
+$ # pdftotext dependencies
+$ # For Unix bases systems
 $ sudo apt install poppler-utils
-$ # For Windows
-$ # Download binaries from http://blog.alivate.com.au/poppler-windows/
+$ # For Windows download binaries from http://blog.alivate.com.au/poppler-windows/
+$
+$ pip install PyPDF2 pillow pdf2image
+$ python generate_readme.py -h
+$
+$ # example
+$ python generate_readme.py ./ListOfQuestions_K17BN.pdf ./README.md -y 2017 -s BN -r 10
 ```
 
 ## Questions
