@@ -20,6 +20,7 @@ $ chmod +x test.sh && test.sh
 ## Questions
 <details><summary>Question Page Snapshots</summary><br />	<img src="./snaps/ques10-07.png" alt="Ques 1 Image" width="425" height="550" border="10" /> 	<img src="./snaps/ques37
 -14.png" alt="Ques 2 Image" width="425" height="550" border="10" />	</details>
+
 ```
 Ques. 1. Design a scheduler with multilevel queue having two queues which will schedule the
 \n

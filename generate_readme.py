@@ -50,8 +50,8 @@ def insert_txt(rPath, identifier, ques1_content, ques2_content, img_data):
 			["grep", "-Eo", "^[^:]+"], 
 			stdout=subprocess.PIPE, stdin=g1.stdout, encoding='utf-8')
 		ques_line = g2.communicate()[0]
-		txt_data = '```\nQues. 1. {}\n---\nQues. 2. {}```\n'.format(ques1_content, ques2_content)
-		data = '{}\n{}'.format(img_data, txt_data)
+		txt_data = '```\nQues. 1. {}\n---\nQues. 2. {}```'.format(ques1_content, ques2_content)
+		data = '{}\n\n{}\n'.format(img_data, txt_data)
 		message = 'Success Txt Insert'
 	except ValueError:
 		return 'This file does not have the identifier: {}'.format(identifier)
