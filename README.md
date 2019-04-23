@@ -1,8 +1,8 @@
 # CSE316
 
-This program internally uses `grep`, `perl`, `pdftotext`.
+This program internally uses `grep`, `perl`, `pdftotext`, `pdftoimage`.
 ```shell
-$ # Dependencies (pdftotext) 
+$ # Dependencies (Poppler Utilities) 
 $ sudo apt install poppler-utils # For Unix bases systems
 $ # For Windows download binaries from http://blog.alivate.com.au/poppler-windows/
 
@@ -14,7 +14,7 @@ $ # Examples
 $ python generate_readme.py ./ListOfQuestions_K17BN.pdf ./README.md -y 2017 -s BN -r 10
 
 $ # Tests
-$ chmod +x test.sh && ./test.sh
+$ chmod +x test.sh && test.sh
 ```
 
 ## Questions
@@ -60,7 +60,5 @@ number of processes and their arrival time, burst time should be given by the us
 ## Known Bugs
 - Registration Number `68` is showing wrong question number. Dude to Form Feed (FF) line ending due to separation of pages and tables to next page.
 - Question number `11, 12, 13, 14, 15 , 16, 17` images aren't generating. grep isn't able to recognize question number as the the Line Feed (LL) line ending character is coming after the first digit of the above specified range.
-- Inefficient implementation on piping pdftotext output to perl process. Possible soultion: save the converted file other thatn buffer.
+- Inefficient implementation on piping pdftotext output to perl process. Possible soultion: save the converted file other than buffer.
 - Text file is generating twice implying bad design. Possible solution: unify txt generation from PyPDF2 and pdftotext.
-
-Possible solution: Port to Poppler utilities like `pdftotext`, `pdftoimage`.
