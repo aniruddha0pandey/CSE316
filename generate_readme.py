@@ -18,12 +18,9 @@ def make_readme(ques1_content, ques2_content, rPath, identifier):
 		g2=subprocess.Popen(
 			["grep", "-Eo", "^[^:]+"], 
 			stdout=subprocess.PIPE, stdin=g1.stdout, encoding='utf-8')
-		
 		ques_line = g2.communicate()[0]
-
 		data = '```\nQues. 1. {}\n---\nQues. 2. {}```\n'.format(ques1_content, ques2_content)
 		insert_data(rPath, int(ques_line), data)
-
 		return 'Success'
 	except ValueError:
 		return 'This file does not have the identifier: {}'.format(identifier)
@@ -32,18 +29,15 @@ def get_ques_content(ques1, ques2, pPath, content=[]):
 	main1=subprocess.Popen(
 		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
 		stdout=subprocess.PIPE)
-
 	g1=subprocess.Popen(
-		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques2)],
+		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques1)],
 		stdout=subprocess.PIPE, stdin=main1.stdout, encoding='utf-8')
 	ques1_content = g1.communicate()[0]
-
 	main2=subprocess.Popen(
 		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
 		stdout=subprocess.PIPE)	
-
 	g2=subprocess.Popen(
-		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques1)],
+		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques2)],
 		stdout=subprocess.PIPE, stdin=main2.stdout, encoding='utf-8')
 	ques2_content = g2.communicate()[0]
 
@@ -90,6 +84,7 @@ def get_args():
 def main():
 	args = get_args()
 	tPath = generate_txt(args['pPath'])
+
 	ques1, ques2 = get_ques_num(
 		tPath, 
 		args['year'], 
@@ -103,8 +98,7 @@ def main():
 		args['pPath']
 	)
 
-	identifier = input("Enter identifier(default '## Questions)': ") or '## Questions'
-
+	identifier = input("Enter identifier(default '## Questions'): ") or '## Questions'
 	task = make_readme(
 		ques1_content,
 		ques2_content,
@@ -113,7 +107,6 @@ def main():
 	)
 
 	print(task)
-
 	return 0
 
 if __name__ == "__main__": sys.exit(main())
