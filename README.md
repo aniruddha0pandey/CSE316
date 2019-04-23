@@ -15,6 +15,9 @@ $ python generate_readme.py ./ListOfQuestions_K17BN.pdf ./README.md -y 2017 -s B
 
 $ # Tests
 $ chmod +x test.sh && test.sh
+
+$ # Compile
+$ make all
 ```
 
 ## Questions
