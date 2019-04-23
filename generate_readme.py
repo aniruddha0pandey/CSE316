@@ -3,14 +3,45 @@ import PyPDF2
 import argparse
 import subprocess
 
-def insert_data(rPath, ques_line, data):
-    lines = open(rPath, 'r').readlines()
-    lines[ques_line] = data
-    out = open(rPath, 'w')
-    out.writelines(lines)
-    out.close()
+from pdf2image import convert_from_path
 
-def make_readme(ques1_content, ques2_content, rPath, identifier):
+from pdf2image.exceptions import (
+    PDFInfoNotInstalledError,
+    PDFPageCountError,
+    PDFSyntaxError
+)
+
+def generate_snaps(pPath, ques1_num, ques2_num):
+	ques1={'num': ques1_num, 'f_page': 7, 'l_page': 7}
+	ques2={'num': ques2_num, 'f_page': 14, 'l_page': 14}
+
+	for q in ques1, ques2:
+		convert_from_path(
+		 	pPath,
+		 	output_folder="./snaps/",
+		 	output_file='ques{}'.format(q['num']),
+		 	first_page=q['f_page'],
+		 	last_page=q['l_page'],
+		 	fmt='png'
+		)
+
+
+	img_ratio_width, img_ratio_height = 17, 22
+	img_data = '<details><summary>Question Page Snapshots</summary><br />\
+	<img src="./snaps/ques{q_no1}-0{q_no_pg1}.png" alt="Ques 1 Image" width="{wid}" height="{hei}" border="10" /> \
+	<img src="./snaps/ques{q_no2}-{q_no_pg2}.png" alt="Ques 2 Image" width="{wid}" height="{hei}" border="10" />\
+	</details>'.format(
+				q_no1=ques1['num'], 
+				q_no_pg1=ques1['f_page'],
+				q_no2=ques2['num'],
+				q_no_pg2=ques2['f_page'],
+				wid=(img_ratio_width*25),
+				hei=(img_ratio_height*25)
+			)
+
+	return img_data, 'Success Img Generated'
+
+def insert_txt(rPath, identifier, ques1_content, ques2_content, img_data):
 	try:
 		g1=subprocess.Popen(
 			["grep", "-n", "^{}".format(identifier), rPath], 
@@ -19,25 +50,39 @@ def make_readme(ques1_content, ques2_content, rPath, identifier):
 			["grep", "-Eo", "^[^:]+"], 
 			stdout=subprocess.PIPE, stdin=g1.stdout, encoding='utf-8')
 		ques_line = g2.communicate()[0]
-		data = '```\nQues. 1. {}\n---\nQues. 2. {}```\n'.format(ques1_content, ques2_content)
-		insert_data(rPath, int(ques_line), data)
-		return 'Success'
+		txt_data = '```\nQues. 1. {}\n---\nQues. 2. {}```\n'.format(ques1_content, ques2_content)
+		data = '{}\n{}'.format(img_data, txt_data)
+		message = 'Success Txt Insert'
 	except ValueError:
 		return 'This file does not have the identifier: {}'.format(identifier)
 
-def get_ques_content(ques1, ques2, pPath, content=[]):
+	lines = open(rPath, 'r').readlines()
+	lines[ int(ques_line) ] = data
+	out = open(rPath, 'w')
+	out.writelines(lines)
+	out.close()
+
+	return message
+
+def make_readme(ques1, ques2, pPath, rPath, identifier):
+	img_data, msgimg = generate_snaps(pPath, ques1['num'], ques2['num'])
+	msgtxt = insert_txt(rPath, identifier, ques1['content'], ques2['content'], img_data)
+	return '{} | {}'.format(msgimg, msgtxt)
+
+
+def get_ques_content(ques1_num, ques2_num, pPath, content=[]):
 	main1=subprocess.Popen(
 		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
 		stdout=subprocess.PIPE)
 	g1=subprocess.Popen(
-		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques1)],
+		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques1_num)],
 		stdout=subprocess.PIPE, stdin=main1.stdout, encoding='utf-8')
 	ques1_content = g1.communicate()[0]
 	main2=subprocess.Popen(
 		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
 		stdout=subprocess.PIPE)	
 	g2=subprocess.Popen(
-		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques2)],
+		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques2_num)],
 		stdout=subprocess.PIPE, stdin=main2.stdout, encoding='utf-8')
 	ques2_content = g2.communicate()[0]
 
@@ -84,8 +129,10 @@ def get_args():
 def main():
 	args = get_args()
 	tPath = generate_txt(args['pPath'])
+	rPath = args['rPath']
+	pPath = args['pPath']
 
-	ques1, ques2 = get_ques_num(
+	ques1_num, ques2_num = get_ques_num(
 		tPath, 
 		args['year'], 
 		args['section'], 
@@ -93,16 +140,19 @@ def main():
 	)
 
 	ques1_content, ques2_content = get_ques_content(
-		ques1, 
-		ques2, 
-		args['pPath']
+		ques1_num, 
+		ques2_num, 
+		pPath
 	)
 
+	ques1={'num': ques1_num, 'content': ques1_content}
+	ques2={'num': ques2_num, 'content': ques2_content}
 	identifier = input("Enter identifier(default '## Questions'): ") or '## Questions'
 	task = make_readme(
-		ques1_content,
-		ques2_content,
-		args['rPath'],
+		ques1,
+		ques2,
+		pPath,
+		rPath,
 		identifier	
 	)
 

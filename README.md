@@ -18,22 +18,10 @@ $ chmod +x test.sh && test.sh
 ```
 
 ## Questions
-<details>
-<summary>Page Snapshots</summary><br />
-
-<img src="./snaps/ques1-7.png" alt="Ques 1 Image" width="340" height="440" border="10" /> <img src="./snaps/ques2-14.png" alt="Ques 2 Image" width="340" height="440" border="10" />
-
-</details>
-
+<details><summary>Question Page Snapshots</summary><br />	<img src="./snaps/ques10-07.png" alt="Ques 1 Image" width="425" height="550" border="10" /> 	<img src="./snaps/ques37
+-14.png" alt="Ques 2 Image" width="425" height="550" border="10" />	</details>
 ```
-Ques. 1. Consider the following four processes, with the length of the CPU burst given in
-\nmilliseconds
-
-Write a C program to calculate average waiting time using shortest-remaining-time-first
-scheduling.
-
----
-Ques. 2. Design a scheduler with multilevel queue having two queues which will schedule the
+Ques. 1. Design a scheduler with multilevel queue having two queues which will schedule the
 \n
 processes on the basis of pre-emptive shortest remaining processing time first algorithm (SROT)
 
@@ -63,9 +51,17 @@ Calculate the average turnaround time and average waiting time for each process.
 
 number of processes and their arrival time, burst time should be given by the user.
 
+
+---
+Ques. 2. Consider the following four processes, with the length of the CPU burst given in
+\nmilliseconds
+
+Write a C program to calculate average waiting time using shortest-remaining-time-first
+scheduling.
 ```
 ## Known Bugs
 - Registration Number `68` is showing wrong question number. Dude to Form Feed (FF) line ending due to separation of pages and tables to next page.
 - Question number `11, 12, 13, 14, 15 , 16, 17` images aren't generating. grep isn't able to recognize question number as the the Line Feed (LL) line ending character is coming after the first digit of the above specified range.
 - Inefficient implementation on piping pdftotext output to perl process. Possible soultion: save the converted file other than buffer.
 - Text file is generating twice implying bad design. Possible solution: unify txt generation from PyPDF2 and pdftotext.
+- Pending method to save snapshots of question pages.
