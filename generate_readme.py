@@ -12,6 +12,18 @@ from pdf2image.exceptions import (
 )
 
 def generate_snaps(pPath, ques1_num, ques2_num):
+   #  with open(pPath, 'rb') as pdf_file:
+   #      read_pdf = PyPDF2.PdfFileReader(pdf_file)
+   #      number_of_pages = read_pdf.getNumPages()
+   #      for page_number in range(number_of_pages):
+   #          page = read_pdf.getPage(page_number)
+   #          page_content = page.extractText()
+			# main=subprocess.Popen(
+			# 	["grep"],
+			# 	stdout=subprocess.PIPE, stdin=page_content, encoding='utf-8')
+			# out, err = main.communicate()[0]
+			# if not err: f_page = page_number + 1
+
 	ques1={'num': ques1_num, 'f_page': 7, 'l_page': 7}
 	ques2={'num': ques2_num, 'f_page': 14, 'l_page': 14}
 
@@ -24,15 +36,6 @@ def generate_snaps(pPath, ques1_num, ques2_num):
 		 	last_page=q['l_page'],
 		 	fmt='png'
 		)
-
-	# convert_from_path(
-	#  	pPath,
-	#  	output_folder="./snaps/",
-	#  	output_file='ques37',
-	#  	first_page=14,
-	#  	last_page=14,
-	#  	fmt='png'
-	# )
 
 	img_ratio_width, img_ratio_height = 17, 22
 	img_data = '<details><summary>Question Page Snapshots</summary><br />\
@@ -79,13 +82,7 @@ def make_readme(ques1, ques2, pPath, rPath, identifier):
 
 
 def get_ques_content(ques1_num, ques2_num, pPath, content=[]):
-	main1=subprocess.Popen(
-		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
-		stdout=subprocess.PIPE)
-	g1=subprocess.Popen(
-		["perl", "-ne", "if(/^(?:Ques\\. |Q)(\\d+)\\.\\s+(.*)/){{$q=$1=={};$_=$2.'\\n';}} print if $q;".format(ques1_num)],
-		stdout=subprocess.PIPE, stdin=main1.stdout, encoding='utf-8')
-	ques1_content = g1.communicate()[0]
+ 
 	main2=subprocess.Popen(
 		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
 		stdout=subprocess.PIPE)	
