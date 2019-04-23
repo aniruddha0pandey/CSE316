@@ -1,5 +1,5 @@
 # CSE316
-
+Create a markdown readme file with subheading **## Questions**, amd run `generate_readme.py` script to automatically populate questions and snaps from pdf file of questions list.  
 This program internally uses `grep`, `perl`, `pdftotext`, `pdftoimage`.
 ```shell
 $ # Dependencies (Poppler Utilities) 
