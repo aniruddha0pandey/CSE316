@@ -24,6 +24,7 @@ $ chmod +x test.sh && test.sh
 <img src="./snaps/ques1.png" alt="Ques 1 Image" width="70" height="100" border="10" /> <img src="./snaps/ques2.png" alt="Ques 2 Image" width="70" height="100" border="10" />
 
 </details>
+
 ```
 Ques. 1. Consider the following four processes, with the length of the CPU burst given in
 \nmilliseconds
