@@ -2,16 +2,19 @@
 
 This program internally uses `grep`, `perl`, `pdftotext`.
 ```shell
-$ # pdftotext dependencies
-$ # For Unix bases systems
-$ sudo apt install poppler-utils
+$ # Dependencies (pdftotext) 
+$ sudo apt install poppler-utils # For Unix bases systems
 $ # For Windows download binaries from http://blog.alivate.com.au/poppler-windows/
-$
+
+$ # Usage
 $ pip install PyPDF2 pillow pdf2image
 $ python generate_readme.py -h
-$
-$ # example
+
+$ # Examples
 $ python generate_readme.py ./ListOfQuestions_K17BN.pdf ./README.md -y 2017 -s BN -r 10
+
+$ # Tests
+$ chmod +x test.sh && ./test.sh
 ```
 
 ## Questions
