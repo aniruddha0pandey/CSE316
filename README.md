@@ -21,7 +21,7 @@ $ chmod +x test.sh && test.sh
 <details>
 <summary>Page Snapshots</summary><br />
 
-<img src="./snaps/ques1.png" alt="Ques 1 Image" width="340" height="440" border="10" /> <img src="./snaps/ques2.png" alt="Ques 2 Image" width="340" height="440" border="10" />
+<img src="./snaps/ques1-7.png" alt="Ques 1 Image" width="340" height="440" border="10" /> <img src="./snaps/ques2-14.png" alt="Ques 2 Image" width="340" height="440" border="10" />
 
 </details>
 

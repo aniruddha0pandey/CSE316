@@ -9,7 +9,8 @@ from pdf2image.exceptions import (
 images = convert_from_path(
 		 	'./ListOfQuestions_K17BN.pdf',
 		 	output_folder="./snaps/",
-		 	first_page=14,
-		 	last_page=14,
+		 	output_file='ques',
+		 	first_page=7,
+		 	last_page=7,
 		 	fmt='png'
 	)
