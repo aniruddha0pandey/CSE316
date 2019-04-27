@@ -81,6 +81,7 @@ def insert_txt(rPath, identifier, ques1_content, ques2_content, img_data):
 def make_readme(ques1, ques2, pPath, rPath, identifier):
 	img_data, msgimg = generate_snaps(pPath, ques1['num'], ques2['num'])
 	msgtxt = insert_txt(rPath, identifier, ques1['content'], ques2['content'], img_data)
+	
 	return '{} | {}'.format(msgimg, msgtxt)
 
 
