@@ -42,13 +42,13 @@ def generate_snaps(pPath, ques1_num, ques2_num):
 	<img src="./snaps/ques{q_no1}-0{q_no_pg1}.png" alt="Ques 1 Image" width="{wid}" height="{hei}" border="10" /> \
 	<img src="./snaps/ques{q_no2}-{q_no_pg2}.png" alt="Ques 2 Image" width="{wid}" height="{hei}" border="10" />\
 	</details>'.format(
-				q_no1=ques1['num'], 
-				q_no_pg1=ques1['f_page'],
-				q_no2=ques2['num'],
-				q_no_pg2=ques2['f_page'],
-				wid=(img_ratio_width*25),
-				hei=(img_ratio_height*25)
-			)
+		q_no1=ques1['num'], 
+		q_no_pg1=ques1['f_page'],
+		q_no2=ques2['num'],
+		q_no_pg2=ques2['f_page'],
+		wid=(img_ratio_width*25),
+		hei=(img_ratio_height*25)
+	)
 
 	return img_data, 'Success Img Generated'
 
