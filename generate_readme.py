@@ -82,7 +82,6 @@ def make_readme(ques1, ques2, pPath, rPath, identifier):
 
 
 def get_ques_content(ques1_num, ques2_num, pPath, content=[]):
- 
 	main2=subprocess.Popen(
 		["pdftotext", "-layout", "-nopgbrk", pPath, "-"],
 		stdout=subprocess.PIPE)	
