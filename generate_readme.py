@@ -132,9 +132,9 @@ def get_args():
 
 def main():
 	args = get_args()
-	tPath = generate_txt(args['pPath'])
 	rPath = args['rPath']
 	pPath = args['pPath']
+	tPath = generate_txt( pPath )
 
 	ques1_num, ques2_num = get_ques_num(
 		tPath, 
