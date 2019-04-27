@@ -11,6 +11,7 @@ from pdf2image.exceptions import (
     PDFSyntaxError
 )
 
+
 def generate_snaps(pPath, ques1_num, ques2_num):
    #  with open(pPath, 'rb') as pdf_file:
    #      read_pdf = PyPDF2.PdfFileReader(pdf_file)
@@ -52,6 +53,7 @@ def generate_snaps(pPath, ques1_num, ques2_num):
 
 	return img_data, 'Success Img Generated'
 
+
 def insert_txt(rPath, identifier, ques1_content, ques2_content, img_data):
 	try:
 		g1=subprocess.Popen(
@@ -75,6 +77,7 @@ def insert_txt(rPath, identifier, ques1_content, ques2_content, img_data):
 
 	return message
 
+
 def make_readme(ques1, ques2, pPath, rPath, identifier):
 	img_data, msgimg = generate_snaps(pPath, ques1['num'], ques2['num'])
 	msgtxt = insert_txt(rPath, identifier, ques1['content'], ques2['content'], img_data)
@@ -92,6 +95,7 @@ def get_ques_content(ques1_num, ques2_num, pPath, content=[]):
 
 	return ques1_content, ques2_content
 
+
 def generate_txt(pdf_file_path):
 	txt_file_path='./snaps/'+pdf_file_path[:-4]+'.txt'
 	with open(pdf_file_path, 'rb') as pdf_file, open(txt_file_path, 'w') as txt_file:
@@ -101,7 +105,9 @@ def generate_txt(pdf_file_path):
 			page = read_pdf.getPage(page_number)
 			page_content = page.extractText()
 			txt_file.write(page_content)
+			
 	return txt_file_path
+
 
 def get_ques_num(tPath, year, section, roll):
 	g1=subprocess.Popen(
@@ -113,7 +119,9 @@ def get_ques_num(tPath, year, section, roll):
 	g3=subprocess.Popen(
 		["grep", "-m", "1", "[[:digit:]],[[:digit:]]"], 
 		stdout=subprocess.PIPE, stdin=g2.stdout, encoding='utf-8')
+	
 	return g3.communicate()[0].replace('\n', '').split(',')
+
 
 def get_args():
 	parser = argparse.ArgumentParser()
@@ -129,6 +137,7 @@ def get_args():
 		help="Roll Number")
 
 	return vars(parser.parse_args())
+
 
 def main():
 	args = get_args()
@@ -161,6 +170,8 @@ def main():
 	)
 
 	print(task)
+	
 	return 0
+
 
 if __name__ == "__main__": sys.exit(main())
